@@ -30,7 +30,9 @@ if leaderboard:
 
     # Convert to DataFrame and display as a table without index
     df = pd.DataFrame(leaderboard)
-    st.table(df)
+    # Display without index
+    st.dataframe(df, use_container_width=True,hide_index=True)
+
 else:
     st.warning("Leaderboard is empty. Add data to 'leaderboard.json'.")
 
